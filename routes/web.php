@@ -80,3 +80,6 @@ Route::get('/add1', function(){
     $posts = $subject->posts;
     return $posts;
 }); 
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
